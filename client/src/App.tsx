@@ -1,13 +1,29 @@
-import "./App.css";
+// import React from "react";
+// import HomeSection from "./components/HomeSection";
+
+// function App() {
+//   return <HomeSection />;
+// }
+
+// export default App;
+
+
+
+
+import React from "react";
+import MissionComponent from "./components/MissionComponent";
+import FooterComponent from "./components/FooterComponent";
+import AdminLoginForm from "./components/AdminLoginForm"; // Import the Login Form
 
 function App() {
   return (
     <>
-      <button className="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-        Primary
-      </button>
+      <AdminLoginForm /> {/* Add the login form */}
+      <MissionComponent />
+      <FooterComponent />
     </>
   );
 }
 
 export default App;
+
