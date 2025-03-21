@@ -28,6 +28,7 @@ const HeroSection = () => {
           WebkitBackgroundClip: "text",
           fontSize: { xs: "2rem", md: "3rem" },
           color: "primary",
+          fontFamily: "Montserrat",
         }}
       >
         Simply Powerful Online Exams
