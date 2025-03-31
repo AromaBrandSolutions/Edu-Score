@@ -1,5 +1,7 @@
+import Demo from "./Components/Demo";
+
 function App() {
-  return <div>hello world</div>;
+  return <Demo />;
 }
 
 export default App;
