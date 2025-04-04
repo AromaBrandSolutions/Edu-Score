@@ -40,7 +40,7 @@ const RecentResults: React.FC = () => {
           <p className="text-right text-gray-800 font-semibold mt-1">78/100 (78%)</p>
         </div>
 
-        {/* Correct & Incorrect Answers */}
+        {/* Correct & Incorrect Blocks */}
         <div className="flex justify-between mt-4">
           <div className="bg-green-100 px-4 py-3 rounded-lg w-[48%] text-center border border-green-300">
             <div className="flex items-center justify-center text-green-700 font-semibold">
@@ -58,6 +58,16 @@ const RecentResults: React.FC = () => {
           </div>
         </div>
 
+        {/* Score Block on New Row with Expanded Width and Light Blue Background */}
+        <div className="flex justify-center mt-4">
+          <div className="bg-blue-100 px-6 py-3 rounded-lg text-center border border-blue-300 w-full">
+            <div className="flex items-center justify-center text-gray-800 font-semibold">
+              Score
+            </div>
+            <p className="text-xl font-bold text-gray-800 mt-1">78%</p>
+          </div>
+        </div>
+
         {/* View Details Button */}
         <div className="mt-6">
           <button className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold text-lg hover:bg-blue-700 transition">
@@ -70,3 +80,4 @@ const RecentResults: React.FC = () => {
 };
 
 export default RecentResults;
+
