@@ -5,6 +5,8 @@ const cors = require("cors");
 const { fetchAndStoreStudents } = require("./controllers/studentController");
 const authRoutes = require("./routes/auth");
 
+const adminRoutes = require("./routes/adminRoutes")
+
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 
@@ -32,6 +34,8 @@ app.get("/", (req, res) => {
 
 app.get("/fetch-students", fetchAndStoreStudents);
 app.use("/api/auth", authRoutes);
+
+app.use("/api/admin", adminRoutes);
 
 const PORT = process.env.NODE_ENV || 5000;
 app.listen(PORT, () => {
