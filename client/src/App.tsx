@@ -13,7 +13,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-       
+        {/* Student Routes */}
         <Route path="/student" element={<StudentDashboard />}>
           <Route index element={<SDashboard />} />
           <Route path="dashboard" element={<SDashboard />} />
@@ -21,7 +21,7 @@ const App: React.FC = () => {
           <Route path="results" element={<Results />} />
         </Route>
 
-       
+        {/* Admin Routes */}
         <Route path="/admin" element={<Admindashboard />}>
           <Route index element={<ADashboard />} />
           <Route path="dashboard" element={<ADashboard />} />
@@ -30,7 +30,7 @@ const App: React.FC = () => {
           <Route path="performance" element={<Performance />} />
         </Route>
 
-        
+        {/* Catch-all route */}
         <Route path="*" element={<StudentDashboard />} />
       </Routes>
     </Router>
