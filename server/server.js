@@ -4,9 +4,9 @@ const cors = require("cors");
 
 const { fetchAndStoreStudents } = require("./controllers/studentController");
 const authRoutes = require("./routes/auth");
+const batchRoutes = require("./routes/deleteStudentData"); 
 
 const mongoose = require("mongoose");
-const morgan = require("morgan");
 
 const connectDB = async () => {
   mongoose
@@ -23,15 +23,14 @@ app.use(express.json());
 connectDB();
 
 
-
-
-
 app.get("/", (req, res) => {
   res.send("Edu-Score Backend Running");
 });
 
 app.get("/fetch-students", fetchAndStoreStudents);
 app.use("/api/auth", authRoutes);
+app.use("/batches", batchRoutes); // Add this line
+
 
 const PORT = process.env.NODE_ENV || 5000;
 app.listen(PORT, () => {
