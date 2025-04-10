@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import StudentDashboard from "./Pages/StudentDashboard";
-import SDashboard from "./Pages/SDashboard";
+import StudentDashboard from "./Pages/StudentDashboardLayout";
+import SDashboard from "./Pages/StudentDashboard";
 import MyExams from "./Pages/MyExams";
 import Results from "./Pages/Results";
-import Admindashboard from "./Pages/Admindashboard";
-import ADashboard from "./Pages/ADashboard";
-import ManageExam from "./Pages/ManageExam";
+import AdmindashboardLayout from "./Pages/AdmindashboardLayout";
+import ADashboard from "./Pages/Admindashboard";
+import ManageStudent from "./Pages/ManageStudent";
 import ScheduleExam from "./Pages/ScheduleExam";
 import Performance from "./Pages/Performance";
 
@@ -22,10 +22,10 @@ const App: React.FC = () => {
         </Route>
 
         {/* Admin Routes */}
-        <Route path="/admin" element={<Admindashboard />}>
+        <Route path="/admin" element={<AdmindashboardLayout />}>
           <Route index element={<ADashboard />} />
           <Route path="dashboard" element={<ADashboard />} />
-          <Route path="manage-exams" element={<ManageExam />} />
+          <Route path="manage-exams" element={<ManageStudent />} />
           <Route path="schedule-exam" element={<ScheduleExam />} />
           <Route path="performance" element={<Performance />} />
         </Route>
