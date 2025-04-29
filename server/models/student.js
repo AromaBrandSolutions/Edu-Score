@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const StudentSchema = new mongoose.Schema({
   batch: { type: String, required: true, index: true },
-  indernId: { type: String, unique: true },
+  internId: { type: String },
   name: String,
   domain: String,
   email: { type: String, unique: true },

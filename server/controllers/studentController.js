@@ -70,15 +70,16 @@ const fetchAndStoreStudents = async (req, res) => {
           filter: { email: student.email },
           update: {
             $setOnInsert: { // Only set these fields on new document creation
-              internalId: student.intern_id, // Corrected field name
+              internId: student.intern_id, // Corrected field name
               name: student.full_name,
               domain: student.domain,
               password: hashedPassword,
+              batch: student.batch,
               createdAt: new Date()
             },
-            $set: { // These fields will update on existing documents
-              batch: student.batch
-            }
+            // $set: { // These fields will update on existing documents
+            //   batch: student.batch
+            // }
           },
           upsert: true
         }

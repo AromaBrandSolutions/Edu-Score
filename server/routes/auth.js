@@ -25,8 +25,11 @@ router.post("/login", async (req, res) => {
     // 3. Create JWT token
     const token = jwt.sign(
       { 
-        indernId: student.indernId,
+        internId: student.internId,
+        name: student.name,
         email: student.email,
+        domain: student.domain,
+        batch: student.batch,
         role: "student" 
       }, 
       process.env.JWT_SECRET,
@@ -37,10 +40,10 @@ router.post("/login", async (req, res) => {
     res.json({
       token,
       user: {
-        indernId: student.indernId,
+        internId: student.internId,
         name: student.name,
         email: student.email,
-        domain: student.domain
+        domain: student.domain,
       },
       message: "Login successful"
     });
@@ -50,5 +53,8 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
+
+
+
 
 module.exports = router;
